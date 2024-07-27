@@ -1,5 +1,46 @@
 # next-docs-zeta
 
+## 13.0.0
+
+### Major Changes
+
+- 09c3103: **Change usage of TOC component**
+
+  **why:** Improve the flexibility of headless components
+
+  **migrate:**
+
+  Instead of
+
+  ```tsx
+  import * as Base from 'fumadocs-core/toc';
+
+  return (
+    <Base.TOCProvider>
+      <Base.TOCItem />
+    </Base.TOCProvider>
+  );
+  ```
+
+  Use
+
+  ```tsx
+  import * as Base from 'fumadocs-core/toc';
+
+  return (
+    <Base.AnchorProvider>
+      <Base.ScrollProvider>
+        <Base.TOCItem />
+        <Base.TOCItem />
+      </Base.ScrollProvider>
+    </Base.AnchorProvider>
+  );
+  ```
+
+### Minor Changes
+
+- c714eaa: Support Remark Admonition plugin
+
 ## 12.5.6
 
 ## 12.5.5
